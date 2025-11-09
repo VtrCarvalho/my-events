@@ -8,6 +8,7 @@ export default function Home(props: any) {
     <>
       <Head>
         <title>My Events | Página Inicial</title>
+        <meta name='description' content="Eventos em que você está envolvido."/>
       </Head>
       <EventList items={props.events}/>
     </>

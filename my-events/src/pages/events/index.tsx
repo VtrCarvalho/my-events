@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { GetServerSideProps } from "next";
 import { getAllEvents } from "../../utils/util";
 import EventList from "@/components/events/event-list";
@@ -18,6 +19,10 @@ export default function EventsPage({ events }: EventsPageProps) {
 
   return (
     <>
+      <Head>
+        <title>Todos os Eventos</title>
+        <meta name='description' content="Todos os eventos em que você está envolvido."/>
+      </Head>
       <EventSearch onSearch={findEventsHandler} />
       <EventList items={events} />
     </>
